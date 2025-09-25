@@ -9,12 +9,10 @@ from .models import CustomUser
 from rest_framework.views import APIView
 import datetime
 
-# Register view
 class RegisterView(generics.CreateAPIView):
     serializer_class = RegisterSerializer
     permission_classes = [AllowAny]
 
-# Login view (manual JWT)
 class LoginView(APIView):
     permission_classes = [AllowAny]
 
@@ -33,7 +31,6 @@ class LoginView(APIView):
             return Response({"token": token, "user_name": user.user_name, "user_email": user.user_email})
         return Response({"error": "Invalid credentials"}, status=status.HTTP_401_UNAUTHORIZED)
 
-# Protected current user
 class UserDetailView(APIView):
     permission_classes = [IsAuthenticated]
 
