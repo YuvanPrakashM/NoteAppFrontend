@@ -22,23 +22,27 @@ export default function Login() {
   };
 
   return (
-    <div>
+    <div className="login-container">
+    <div className="login-box">
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
         <input
           placeholder="Email"
           type="email"
+          className="fields"
           value={form.user_email}
           onChange={(e) => setForm({ ...form, user_email: e.target.value })}
         />
         <input
           placeholder="Password"
           type="password"
+          className="fields"
           value={form.password}
           onChange={(e) => setForm({ ...form, password: e.target.value })}
         />
-        <button type="submit">Login</button>
+        <button className="login-btn" type="submit">Login</button>
       </form>
+    </div>
     </div>
   );
 }

@@ -40,3 +40,49 @@ a {
     color-scheme: dark;
   }
 }
+
+
+
+.login-btn {
+  background-color: #f4b183;
+  border: none;
+  padding: 8px 15px;
+  color: white;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.register-btn {
+  background-color: #79c2c2;
+  border: none;
+  padding: 8px 15px;
+  color: white;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.login-box {
+  background-color: #fdf3e7;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.fields {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}

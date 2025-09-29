@@ -1,6 +1,6 @@
 "use client";
 import { useSelector, useDispatch } from "react-redux";
-import { clearAuth } from "@/store/authSlice";
+import { clearAuth } from "./store/authSlice";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <div>
       <h1>Welcome {user?.user_name}</h1>
-      <button onClick={handleLogout}>Logout</button>
+      <button className="" onClick={handleLogout}>Logout</button>
       <button onClick={() => router.push("/notes")}>Go to Notes</button>
     </div>
   );
