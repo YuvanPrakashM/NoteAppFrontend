@@ -63,17 +63,19 @@ export default function NotesPage() {
     <div style={{ padding: "20px" }}>
       <h1>My Notes</h1>
 
-      
-      <form onSubmit={handleAddNote} style={{ marginBottom: "20px" }}>
+      <div className="login-container">
+      <form className="login-box" onSubmit={handleAddNote} style={{ marginBottom: "20px" }}>
         <input
           type="text"
           placeholder="Title"
+          className = "fields"
           value={form.note_title}
           onChange={(e) => setForm({ ...form, note_title: e.target.value })}
           required
           style={{ marginRight: "10px" }}
         />
         <input
+          className = "fields"
           type="text"
           placeholder="Content"
           value={form.note_content}
@@ -81,8 +83,9 @@ export default function NotesPage() {
           required
           style={{ marginRight: "10px" }}
         />
-        <button type="submit">Add Note</button>
+        <button className="login-btn" type="submit">Add Note</button>
       </form>
+      </div>
 
       
       <ul>
